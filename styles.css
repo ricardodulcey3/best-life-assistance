@@ -86,7 +86,7 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 /* ===== Header ===== */
 .site-header{
   position: sticky; top:0; z-index: 100;
-  background: rgba(17,17,79,.96); backdrop-filter: blur(10px);
+  background: #222249;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .header-row{ display:flex; align-items:center; justify-content:space-between; padding: 14px 24px; gap: 20px; }
