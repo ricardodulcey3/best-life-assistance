@@ -91,7 +91,7 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 }
 .header-row{ display:flex; align-items:center; justify-content:space-between; padding: 14px 24px; gap: 20px; }
 .brand{ display:flex; align-items:center; gap:10px; }
-.brand-mark{ flex: none; }
+.brand-mark{ flex: none; border-radius: 9px; }
 .brand-word{ font-family: var(--font-accent); font-weight:700; color: #fff; font-size: 1.02rem; line-height:1.15; }
 .brand-word em{ font-style:normal; font-weight:500; color: var(--terracotta-light); font-size:.85rem; }
 
