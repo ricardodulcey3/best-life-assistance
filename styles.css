@@ -95,6 +95,8 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 .brand-word{ font-family: var(--font-accent); font-weight:700; color: #fff; font-size: 1.35rem; line-height:1.15; }
 .brand-word em{ font-style:normal; font-weight:500; color: var(--terracotta-light); font-size:1.05rem; }
 .site-header .brand-word em{ color: #fff; }
+.site-header .btn--outline{ border-color: rgba(255,255,255,.5); color:#fff; }
+.site-header .btn--outline:hover{ background:#fff; color: var(--navy); }
 
 .header-tagline{
   font-family: var(--font-accent); font-weight:600; font-size:.82rem; color: rgba(255,255,255,.65);
