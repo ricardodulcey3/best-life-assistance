@@ -99,14 +99,9 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 .site-header .btn--outline{ border-color: rgba(255,255,255,.5); color:#fff; }
 .site-header .btn--outline:hover{ background:#fff; color: var(--navy); }
 
-.header-tagline{
-  font-family: var(--font-accent); font-weight:600; font-size:.82rem; color: rgba(255,255,255,.65);
-  margin:0; padding-left:16px; border-left:1px solid rgba(255,255,255,.2);
-}
-
-.main-nav{ display:flex; gap: 30px; }
+.main-nav{ display:flex; gap: 36px; }
 .main-nav a{
-  font-family: var(--font-accent); font-weight:600; font-size:.95rem; color: #fff;
+  font-family: var(--font-accent); font-weight:600; font-size:1.12rem; color: #fff;
   position:relative; padding: 4px 0;
 }
 .main-nav a::after{
@@ -117,8 +112,8 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 
 .header-actions{ display:flex; align-items:center; gap:14px; }
 .tel-pill{
-  display:flex; align-items:center; gap:8px; font-family: var(--font-accent); font-weight:700;
-  color: #fff; background: rgba(255,255,255,.1); padding: 9px 16px; border-radius: 999px; font-size:.92rem;
+  display:flex; align-items:center; gap:10px; font-family: var(--font-accent); font-weight:700;
+  color: #fff; background: rgba(255,255,255,.1); padding: 11px 20px; border-radius: 999px; font-size:1.08rem;
 }
 
 .nav-toggle{
@@ -132,10 +127,8 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 }
 .mobile-nav .btn{ margin-top:14px; }
 
-@media (max-width: 1080px){
-  .header-tagline{ display:none; }
-}
-@media (max-width: 880px){
+/* El menú pasa a hamburguesa antes de que los enlaces se partan en varias líneas. */
+@media (max-width: 1120px){
   .main-nav{ display:none; }
   .tel-pill{ display:none; }
   .nav-toggle{ display:flex; }
