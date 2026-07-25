@@ -78,7 +78,7 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 /* ===== Eyebrow / labels ===== */
 .eyebrow{
   font-family: var(--font-accent); font-weight:700; text-transform: uppercase;
-  letter-spacing: .14em; font-size: .78rem; color: var(--terracotta); margin: 0 0 12px;
+  letter-spacing: .14em; font-size: 1rem; color: var(--terracotta); margin: 0 0 12px;
 }
 .eyebrow--light{ color: var(--terracotta-light); }
 .eyebrow--dark{ color: var(--terracotta); }
