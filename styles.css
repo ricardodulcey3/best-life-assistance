@@ -91,7 +91,8 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 }
 .header-row{ display:flex; align-items:center; justify-content:space-between; padding: 4px 24px; gap: 20px; }
 .brand{ display:flex; align-items:center; gap:16px; }
-.brand-mark{ flex: none; width: 122px; height: 104px; }
+/* Solo se fija la altura: el ancho lo calcula el navegador, así el logo nunca se deforma. */
+.brand-mark{ flex: none; width: auto; height: 104px; }
 .brand-word{ font-family: var(--font-accent); font-weight:700; color: #fff; font-size: 1.35rem; line-height:1.15; }
 .brand-word em{ font-style:normal; font-weight:500; color: var(--terracotta-light); font-size:1.05rem; }
 .site-header .brand-word em{ color: #fff; }
@@ -140,7 +141,7 @@ ul, ol{ margin:0; padding:0; list-style:none; }
   .nav-toggle{ display:flex; }
   .site-header.is-open .mobile-nav{ display:flex; }
   .header-row{ padding: 6px 24px; }
-  .brand-mark{ width: 76px; height: 73px; }
+  .brand-mark{ height: 73px; }
   .brand-word{ font-size: 1.2rem; }
   .brand-word em{ font-size: .95rem; }
 }
@@ -311,6 +312,7 @@ h1{ font-size: clamp(2.6rem, 4.6vw, 4.1rem); }
 .footer-grid{ display:flex; align-items:center; justify-content:space-between; gap: 24px; padding-bottom: 34px; }
 .brand--footer .brand-word{ color:#fff; }
 .brand--footer .brand-word em{ color: var(--terracotta-light); }
+.brand-mark--footer{ width: auto; height: 54px; }
 .footer-grid nav{ display:flex; gap: 22px; flex-wrap:wrap; }
 .footer-grid nav a{ font-family: var(--font-accent); font-weight:600; font-size:.9rem; }
 .footer-grid nav a:hover{ color: var(--terracotta-light); }
