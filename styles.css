@@ -86,7 +86,7 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 /* ===== Header ===== */
 .site-header{
   position: sticky; top:0; z-index: 100;
-  background: #222249;
+  background: #1c1c47;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .header-row{ display:flex; align-items:center; justify-content:space-between; padding: 7px 24px; gap: 20px; }
@@ -305,11 +305,10 @@ h1{ font-size: clamp(2.6rem, 4.6vw, 4.1rem); }
 @media (max-width: 900px){ .contact-grid{ grid-template-columns:1fr; } }
 
 /* ===== Footer ===== */
-.site-footer{ background: var(--navy); color: rgba(255,255,255,.8); padding: 56px 0 0; }
+.site-footer{ background: #1c1c47; color: rgba(255,255,255,.8); padding: 56px 0 0; }
 .footer-grid{ display:flex; align-items:center; justify-content:space-between; gap: 24px; padding-bottom: 34px; }
 .brand--footer .brand-word{ color:#fff; }
 .brand--footer .brand-word em{ color: var(--terracotta-light); }
-.brand-mark--footer{ border-radius: 10px; }
 .footer-grid nav{ display:flex; gap: 22px; flex-wrap:wrap; }
 .footer-grid nav a{ font-family: var(--font-accent); font-weight:600; font-size:.9rem; }
 .footer-grid nav a:hover{ color: var(--terracotta-light); }
