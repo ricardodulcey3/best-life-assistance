@@ -89,11 +89,11 @@ ul, ol{ margin:0; padding:0; list-style:none; }
   background: #222249;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
-.header-row{ display:flex; align-items:center; justify-content:space-between; padding: 14px 24px; gap: 20px; }
-.brand{ display:flex; align-items:center; gap:10px; }
-.brand-mark{ flex: none; border-radius: 9px; }
-.brand-word{ font-family: var(--font-accent); font-weight:700; color: #fff; font-size: 1.02rem; line-height:1.15; }
-.brand-word em{ font-style:normal; font-weight:500; color: var(--terracotta-light); font-size:.85rem; }
+.header-row{ display:flex; align-items:center; justify-content:space-between; padding: 22px 24px; gap: 20px; }
+.brand{ display:flex; align-items:center; gap:14px; }
+.brand-mark{ flex: none; border-radius: 12px; width: 72px; height: 69px; }
+.brand-word{ font-family: var(--font-accent); font-weight:700; color: #fff; font-size: 1.35rem; line-height:1.15; }
+.brand-word em{ font-style:normal; font-weight:500; color: var(--terracotta-light); font-size:1.05rem; }
 .site-header .brand-word em{ color: #fff; }
 
 .header-tagline{
@@ -137,6 +137,10 @@ ul, ol{ margin:0; padding:0; list-style:none; }
   .tel-pill{ display:none; }
   .nav-toggle{ display:flex; }
   .site-header.is-open .mobile-nav{ display:flex; }
+  .header-row{ padding: 16px 24px; }
+  .brand-mark{ width: 58px; height: 56px; }
+  .brand-word{ font-size: 1.18rem; }
+  .brand-word em{ font-size: .95rem; }
 }
 
 /* ===== Hero ===== */
