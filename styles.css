@@ -54,6 +54,17 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 .contact-lead{
   text-align: justify;
 }
+@media (max-width: 640px){
+  .hero-lead,
+  .why-copy p,
+  .mission-copy p,
+  .check-list li,
+  .service-card p,
+  .services-tagline,
+  .contact-lead{
+    text-align: left;
+  }
+}
 .wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 
 .sr-only{
