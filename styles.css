@@ -44,7 +44,9 @@ h1 em, h2 em, h3 em{ font-style: italic; color: var(--terracotta); }
 p{ margin: 0 0 1em; color: var(--ink-soft); }
 ul, ol{ margin:0; padding:0; list-style:none; }
 
-/* Texto justificado en los bloques de contenido */
+/* Texto justificado en los bloques de contenido.
+   El guionado automático (en italiano, por lang="it") evita que se abran
+   huecos grandes entre palabras al repartir la última línea. */
 .hero-lead,
 .why-copy p,
 .mission-copy p,
@@ -53,6 +55,9 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 .services-tagline,
 .contact-lead{
   text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
 }
 @media (max-width: 640px){
   .hero-lead,
@@ -63,6 +68,8 @@ ul, ol{ margin:0; padding:0; list-style:none; }
   .services-tagline,
   .contact-lead{
     text-align: left;
+    -webkit-hyphens: manual;
+    hyphens: manual;
   }
 }
 .wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
