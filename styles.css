@@ -43,6 +43,17 @@ h1,h2,h3{ font-family: var(--font-display); color: var(--navy); margin:0 0 .5em;
 h1 em, h2 em, h3 em{ font-style: italic; color: var(--terracotta); }
 p{ margin: 0 0 1em; color: var(--ink-soft); }
 ul, ol{ margin:0; padding:0; list-style:none; }
+
+/* Texto justificado en los bloques de contenido */
+.hero-lead,
+.why-copy p,
+.mission-copy p,
+.check-list li,
+.service-card p,
+.services-tagline,
+.contact-lead{
+  text-align: justify;
+}
 .wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 
 .sr-only{
@@ -204,11 +215,7 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 .quote-card figcaption img{ width:36px; height:36px; border-radius:50%; object-fit:cover; }
 
 .check-list{ margin-top: 8px; display:flex; flex-direction:column; gap:12px; }
-.check-list li{ position:relative; padding-left: 30px; color: var(--ink-soft); }
-.check-list li::before{
-  content:"✓"; position:absolute; left:0; top:2px; color:#fff; background: var(--terracotta);
-  width:20px; height:20px; border-radius:50%; font-size:.72rem; display:flex; align-items:center; justify-content:center;
-}
+.check-list li{ color: var(--ink-soft); }
 @media (max-width: 900px){
   .why-grid{ grid-template-columns:1fr; }
   .why-visual{ order:-1; }
