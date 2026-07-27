@@ -109,7 +109,7 @@ ul, ol{ margin:0; padding:0; list-style:none; }
   font-family: var(--font-accent); font-weight:700; text-transform: uppercase;
   letter-spacing: .14em; font-size: 1rem; color: var(--terracotta); margin: 0 0 12px;
 }
-.eyebrow--light{ color: var(--terracotta-light); }
+.eyebrow--light{ color: #fff; }
 .eyebrow--dark{ color: var(--terracotta); }
 
 /* ===== Header ===== */
@@ -286,12 +286,11 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 }
 .plan-card{ text-align:center; align-items:center; }
 .plan-card h3{ color:#fff; font-size:1.5rem; margin-bottom:.15em; }
-.plan-desc{ font-family: var(--font-accent); font-weight:600; color: var(--terracotta-light); margin:0; }
+.plan-desc{ font-family: var(--font-accent); font-weight:600; color: #fff; margin:0; }
 .plan-card--accent{
   background: var(--terracotta); border-color: var(--terracotta);
   transform: translateY(-10px);
 }
-.plan-card--accent .plan-desc{ color: #fff; }
 
 @media (max-width: 900px){
   .plans-grid{ grid-template-columns:1fr; }
@@ -331,7 +330,7 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 .site-footer{ background: var(--navy); color: rgba(255,255,255,.8); padding: 56px 0 0; }
 .footer-grid{ display:flex; align-items:center; justify-content:space-between; gap: 24px; padding-bottom: 34px; }
 .brand--footer .brand-word{ color:#fff; }
-.brand--footer .brand-word em{ color: var(--terracotta-light); }
+.brand--footer .brand-word em{ color:#fff; }
 .brand-mark--footer{ width: auto; height: 54px; }
 .footer-grid nav{ display:flex; gap: 22px; flex-wrap:wrap; }
 .footer-grid nav a{ font-family: var(--font-accent); font-weight:600; font-size:.9rem; }
