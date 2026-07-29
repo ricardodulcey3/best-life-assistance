@@ -112,6 +112,13 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 .eyebrow--light{ color: #fff; }
 .eyebrow--dark{ color: var(--terracotta); }
 
+/* Etiquetas de "Non sei solo", "Servizi" y "Contatti": +7px sobre la base de 16px */
+#perche .eyebrow,
+#servizi .eyebrow,
+#contatti .eyebrow{
+  font-size: 1.4375rem;
+}
+
 /* ===== Header ===== */
 .site-header{
   position: sticky; top:0; z-index: 100;
@@ -279,6 +286,7 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 /* ===== Plans ===== */
 .plans{ background: var(--navy); padding: 90px 0; }
 .plans .section-head h2{ color:#fff; }
+.plans .section-head{ margin-left:auto; margin-right:auto; text-align:center; }
 .plans-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .plan-card{
   background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14);
