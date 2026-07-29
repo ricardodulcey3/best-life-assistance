@@ -112,11 +112,18 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 .eyebrow--light{ color: #fff; }
 .eyebrow--dark{ color: var(--terracotta); }
 
-/* Etiquetas de "Non sei solo", "Servizi" y "Contatti": +7px sobre la base de 16px */
+/* Etiquetas de "Non sei solo", "Servizi" y "Contatti": +7px sobre la base de 16px (solo en escritorio) */
 #perche .eyebrow,
 #servizi .eyebrow,
 #contatti .eyebrow{
   font-size: 1.4375rem;
+}
+@media (max-width: 640px){
+  #perche .eyebrow,
+  #servizi .eyebrow,
+  #contatti .eyebrow{
+    font-size: 1rem;
+  }
 }
 
 /* ===== Header ===== */
