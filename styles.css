@@ -309,7 +309,7 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 
 @media (max-width: 900px){
   .plans-grid{ grid-template-columns:1fr; }
-  .plan-card--accent{ transform:none; order:-1; }
+  .plan-card--accent{ transform:none; }
 }
 
 /* ===== Contact ===== */
