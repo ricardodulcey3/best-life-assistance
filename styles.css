@@ -230,6 +230,11 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 }
 .pulse-line.is-drawn{ transition: stroke-dashoffset 1.6s cubic-bezier(.4,0,.2,1); stroke-dashoffset:0; }
 
+/* Separador entre "Il nostro servizio" y "Servizi": llena el hueco vacío,
+   por eso se recortan los paddings que quedaban a ambos lados. */
+.pulse-divider--mid{ margin-top: 24px; }
+.pulse-divider--mid svg{ height: 56px; }
+
 /* ===== Why ===== */
 .why{ background: var(--white); padding: 90px 0; }
 .why-grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items:center; }
@@ -261,7 +266,8 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 }
 
 /* ===== Perché scegliere noi / Il nostro servizio ===== */
-.mission{ padding: 90px 0; }
+/* El padding inferior se recorta porque debajo va el separador de pulso */
+.mission{ padding: 90px 0 24px; }
 .mission-grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items:center; }
 .mission-copy h2:nth-of-type(2){ margin-top: 1.2em; }
 .mission-photo{
@@ -274,7 +280,8 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 }
 
 /* ===== Services ===== */
-.services{ padding: 90px 0; }
+/* Sin padding superior: el bloque arranca justo debajo del separador */
+.services{ padding: 0 0 90px; }
 .section-head{ max-width: 640px; margin-bottom: 48px; }
 .section-head h2{ font-size: clamp(1.8rem, 3vw, 2.5rem); }
 .services-tagline{ font-family: var(--font-display); font-style:italic; font-size:1.1rem; color: var(--ink-soft); margin-top:.6em; }

@@ -14,20 +14,20 @@ if (navToggle) {
   });
 }
 
-// Draw-on pulse line when hero is visible
-const pulseLine = document.querySelector('.pulse-line');
-if (pulseLine && 'IntersectionObserver' in window) {
+// Cada línea de pulso se dibuja cuando entra en pantalla
+const pulseLines = document.querySelectorAll('.pulse-line');
+if (pulseLines.length && 'IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        pulseLine.classList.add('is-drawn');
-        io.disconnect();
+        entry.target.classList.add('is-drawn');
+        io.unobserve(entry.target);
       }
     });
   }, { threshold: 0.3 });
-  io.observe(pulseLine);
-} else if (pulseLine) {
-  pulseLine.classList.add('is-drawn');
+  pulseLines.forEach(line => io.observe(line));
+} else {
+  pulseLines.forEach(line => line.classList.add('is-drawn'));
 }
 
 // Contact form: no backend yet, open a mailto with the message as a friendly fallback
