@@ -198,6 +198,11 @@ ul, ol{ margin:0; padding:0; list-style:none; }
 h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin: 28px 0 30px; }
 
+/* Botón "Contatti" de la sección "Non sei solo": baja ~2 líneas, solo en escritorio */
+@media (min-width: 901px){
+  .why-copy .hero-actions{ margin-top: calc(28px + 3.2rem); }
+}
+
 .value-pills{ display:flex; gap:10px; flex-wrap:wrap; }
 .value-pills li{
   font-family: var(--font-accent); font-weight:600; font-size:.85rem; color: var(--navy);
@@ -316,12 +321,12 @@ h1{ font-size: clamp(2.68rem, 4.74vw, 4.15rem); }
 .contact{ background: var(--cream-2); padding: 90px 0; }
 .contact-grid{ display:grid; grid-template-columns: 1fr 1.1fr; gap: 60px; }
 .contact h2{ max-width: 44ch; }
-.contact-list{ margin-top: 30px; display:flex; flex-direction:column; gap: 20px; }
+.contact-list{ margin-top: calc(30px + 3.2rem); display:flex; flex-direction:column; gap: 20px; }
 .contact-list dt{
   font-family: var(--font-accent); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-  font-size:.72rem; color: var(--terracotta); margin-bottom:6px;
+  font-size:.9075rem; color: var(--terracotta); margin-bottom:6px;
 }
-.contact-list dd{ margin:0; font-weight:600; color: var(--navy); font-size:1.05rem; }
+.contact-list dd{ margin:0; font-weight:600; color: var(--navy); font-size:1.2375rem; }
 .contact-list dd a:hover{ color: var(--terracotta); }
 
 .contact-form{
