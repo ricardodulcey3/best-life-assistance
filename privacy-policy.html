@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-<meta charset="UTF-8">
+<head><meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Best Life Assistance</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -18,6 +18,62 @@
   .legal ul{ list-style: disc; padding-left: 1.4em; margin-bottom: 1em; }
   .legal ul li{ margin-bottom: .5em; }
 </style>
+<!-- Consenso cookie + Meta Pixel (il Pixel si carica solo dopo il consenso) -->
+<style>
+.bla-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#fff;color:#23233A;border-radius:18px;box-shadow:0 20px 40px -10px rgba(17,17,79,.35);padding:20px 20px 16px;font-family:'Inter',sans-serif;font-size:14px;line-height:1.5;border:1px solid #DCD6C9}
+.bla-cc h2{font-family:'Fraunces',serif;font-size:18px;margin:0 32px 6px 0;color:#11114F}
+.bla-cc p{margin:0 0 14px}
+.bla-cc a{color:#B63830}
+.bla-cc__btns{display:flex;gap:10px;flex-wrap:wrap}
+.bla-cc__btns button{flex:1 1 140px;padding:11px 16px;border-radius:999px;font:600 14px 'Inter',sans-serif;cursor:pointer;border:2px solid #11114F}
+.bla-cc__ok{background:#11114F;color:#fff}
+.bla-cc__no{background:#fff;color:#11114F}
+.bla-cc__x{position:absolute;top:8px;right:10px;background:none;border:0;font-size:24px;line-height:1;color:#56566B;cursor:pointer;padding:4px 8px}
+</style>
+<script>
+(function () {
+  var KEY = 'bla_cookie_consent', MAX = 1000 * 60 * 60 * 24 * 180, PIXEL = '927826460027769';
+  function read() { try { var v = JSON.parse(localStorage.getItem(KEY)); if (v && Date.now() - v.t < MAX) return v.c; } catch (e) {} return null; }
+  function write(c) { try { localStorage.setItem(KEY, JSON.stringify({ c: c, t: Date.now() })); } catch (e) {} }
+  function loadPixel() {
+    if (window.fbq) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL);
+    fbq('track', 'PageView');
+  }
+  function hide() { var b = document.getElementById('bla-cc'); if (b) b.remove(); }
+  function choose(c) {
+    write(c); hide();
+    if (c === 'yes') loadPixel();
+    else if (window.fbq) { fbq('consent', 'revoke'); location.reload(); }
+  }
+  function show() {
+    if (document.getElementById('bla-cc')) return;
+    var d = document.createElement('div');
+    d.id = 'bla-cc'; d.className = 'bla-cc'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', 'Preferenze cookie');
+    d.innerHTML = '<button type="button" class="bla-cc__x" aria-label="Chiudi e rifiuta">&times;</button>' +
+      '<h2>Rispettiamo la tua privacy</h2>' +
+      '<p>Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, il Meta Pixel per misurare l\u2019efficacia dei nostri annunci su Facebook e Instagram. Puoi cambiare idea in qualsiasi momento da \u00abPreferenze cookie\u00bb in fondo alla pagina. <a href="privacy-policy.html#cookie">Maggiori informazioni</a></p>' +
+      '<div class="bla-cc__btns"><button type="button" class="bla-cc__no">Rifiuta</button><button type="button" class="bla-cc__ok">Accetta</button></div>';
+    document.body.appendChild(d);
+    d.querySelector('.bla-cc__ok').onclick = function () { choose('yes'); };
+    d.querySelector('.bla-cc__no').onclick = function () { choose('no'); };
+    d.querySelector('.bla-cc__x').onclick = function () { choose('no'); };
+  }
+  window.blaCookieSettings = show;
+  if (read() === 'yes') loadPixel();
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!read()) show();
+    var nav = document.querySelector('.site-footer nav');
+    if (nav) { var a = document.createElement('a'); a.href = '#'; a.textContent = 'Preferenze cookie'; a.onclick = function (e) { e.preventDefault(); show(); }; nav.appendChild(a); }
+  });
+})();
+</script>
+<!-- Fine consenso cookie + Meta Pixel -->
 </head>
 <body>
 
@@ -43,11 +99,16 @@
     <h2>Dati raccolti</h2>
     <ul>
       <li>Dati forniti volontariamente tramite il modulo di contatto (nome, email, messaggio)</li>
-      <li>Dati di navigazione raccolti tramite cookie tecnici</li>
+      <li>Dati di navigazione raccolti tramite cookie tecnici e, solo previo consenso, cookie di marketing di terze parti (Meta Pixel)</li>
     </ul>
 
     <h2>Finalità del trattamento</h2>
     <p>I dati raccolti tramite il modulo di contatto sono utilizzati esclusivamente per rispondere alle richieste di informazioni e preventivi relativi ai servizi di assistenza domiciliare.</p>
+
+    <h2 id="cookie">Cookie</h2>
+    <p>Il sito utilizza cookie tecnici necessari al suo funzionamento, che non richiedono consenso.</p>
+    <p>Solo previo consenso espresso tramite il banner, il sito utilizza il <strong>Meta Pixel</strong> fornito da Meta Platforms Ireland Ltd., uno strumento di marketing che permette di misurare le visite e le azioni di contatto (clic sul telefono o su WhatsApp, invio del modulo) generate dalle nostre campagne pubblicitarie su Facebook e Instagram. Per maggiori informazioni consulta l'<a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">informativa privacy di Meta</a>.</p>
+    <p>La tua scelta viene ricordata per 6 mesi. Puoi modificarla in qualsiasi momento: <a href="#" onclick="blaCookieSettings();return false;">Preferenze cookie</a>.</p>
 
     <h2>Diritti dell'interessato</h2>
     <p>In qualsiasi momento è possibile richiedere l'accesso, la rettifica o la cancellazione dei propri dati scrivendo a info@bestlifeassistance.it.</p>
